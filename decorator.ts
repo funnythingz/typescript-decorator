@@ -2,13 +2,13 @@ module PATTERN {
 
   export interface Precure {
 
-    getTitle();
+    getTitle(): string;
 
   }
 
   export class SweetPrecure implements Precure {
 
-    getTitle() {
+    getTitle(): string {
       return 'スイートプリキュア';
     }
 
@@ -16,7 +16,7 @@ module PATTERN {
 
   export class SmilePrecure implements Precure {
 
-    getTitle() {
+    getTitle(): string {
       return 'スマイルプリキュア';
     }
 
@@ -28,7 +28,7 @@ module PATTERN {
 
     constructor(private precure: Precure) {}
 
-    getTitle() {
+    getTitle(): string {
       return this.subTitle + this.precure.getTitle();
     }
 
